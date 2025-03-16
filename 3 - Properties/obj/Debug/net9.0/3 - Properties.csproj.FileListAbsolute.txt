@@ -1,0 +1,14 @@
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\bin\Debug\net9.0\3 - Properties.exe
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\bin\Debug\net9.0\3 - Properties.deps.json
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\bin\Debug\net9.0\3 - Properties.runtimeconfig.json
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\bin\Debug\net9.0\3 - Properties.dll
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\bin\Debug\net9.0\3 - Properties.pdb
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.AssemblyInfoInputs.cache
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.AssemblyInfo.cs
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.csproj.CoreCompileInputs.cache
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.dll
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\refint\3 - Properties.dll
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.pdb
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.genruntimeconfig.cache
+C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\ref\3 - Properties.dll
