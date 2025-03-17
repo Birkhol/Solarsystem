@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text;
 
 
 namespace Properties {
     class Program {
         static void Main() {
+
+            Dictionary<string, Body> solarSystem = new Dictionary<string, Body>();
 
             // Standard traditional syntax
             Body sun = new Body("Sol");
@@ -13,6 +16,7 @@ namespace Properties {
             sun.objectRadius = 695000;
             sun.rotationalPeriod = 648;
             sun.objectColor = "Yellow";
+            solarSystem["Sun"] = sun;
 
             // Using object initilaizers instead
             Body earth = new Body("Terra")
@@ -24,24 +28,31 @@ namespace Properties {
                 objectColor = "Blue"
             };
             sun[2] = earth;
+            solarSystem["Earth"] = earth;
 
             // And now with simplified "new" statement
             Body moon = new("The Moon") {Period = 28,Radius = 384000, objectRadius = 1737, rotationalPeriod = 648, objectColor = "Gray"};
             earth[0] = moon;
+            solarSystem["Moon"] = moon;
 
 
 
             Body mercury = new Body("Mercury") { Period = 88, Radius = 57910000, objectRadius = 2440, rotationalPeriod = 1416, objectColor = "Gray" };
             sun[0] = mercury;
+            solarSystem["Mercury"] = mercury;
 
 
-            sun[1] = new Body("Venus") { Period = 225, Radius = 108200000, objectRadius = 6051, rotationalPeriod = 5832, objectColor = "Orange" };
+            Body venus = new Body("Venus") { Period = 225, Radius = 108200000, objectRadius = 6051, rotationalPeriod = 5832, objectColor = "Orange" };
+            sun[1] = venus;
+            solarSystem["Venus"] = venus;
 
             Body mars = new Body("Mars") { Period = 687, Radius = 227940000, objectRadius = 3389, rotationalPeriod = 25, objectColor = "Red" };
             mars[0] = new Body("Phobos") { Period = 8, Radius = 9377 };
+
             mars[1] = new Body("Deimos") { Period = 30, Radius = 23460 };
 
             sun[3] = mars;
+            solarSystem["Mars"] = mars;
 
             Body jupiter = new Body("Jupiter") { Period = 4333, Radius = 778330000, objectRadius = 69911, rotationalPeriod = 10, objectColor = "Beige" };
             jupiter[0] = new Body("Metis") { Period = 1, Radius = 128000 };
@@ -61,6 +72,7 @@ namespace Properties {
             jupiter[14] = new Body("Pasiphae") { Period = -735, Radius = 23500000 };
             jupiter[15] = new Body("Sinope") { Period = -758, Radius = 23700000 };
             sun[4] = jupiter;
+            solarSystem["Jupiter"] = jupiter;
 
             Body saturn = new Body("Saturn") { Period = 10760, Radius = 1429400000, objectRadius = 58232, rotationalPeriod = 11, objectColor = "Latte" };
             saturn[0] = new Body("Pan") { Period = 1, Radius = 134000 };
@@ -82,6 +94,7 @@ namespace Properties {
             saturn[16] = new Body("Iapetus") { Period = 79, Radius = 3561000 };
             saturn[17] = new Body("Phoebe") { Period = -550, Radius = 12952000 };
             sun[5] = saturn;
+            solarSystem["Saturn"] = saturn;
 
             Body uranus = new Body("Uranus") { Period = 30685, Radius = 2870990000, objectRadius = 25362, rotationalPeriod = 17, objectColor = "Blue" };
             uranus[0] = new Body("Cordelia") { Period = 1, Radius = 50000 };
@@ -105,6 +118,7 @@ namespace Properties {
             uranus[18] = new Body("Prospero") { Period = -2019, Radius = 16568000 };
             uranus[19] = new Body("Setebos") { Period = -2239, Radius = 17681000 };
             sun[6] = uranus;
+            solarSystem["Uranus"] = uranus;
 
             Body neptune = new Body("Neptune") { Period = 60190, Radius = 4504300000, objectRadius = 24622, rotationalPeriod = 16, objectColor = "Blue" };
             neptune[0] = new Body("Naiad") { Period = 1, Radius = 48000 };
@@ -116,18 +130,52 @@ namespace Properties {
             neptune[6] = new Body("Triton") { Period = -6, Radius = 355000 };
             neptune[7] = new Body("Nereid") { Period = 360, Radius = 5513000 };
             sun[7] = neptune;
+            solarSystem["Neptune"] = neptune;
 
             Body pluto = new Body("Pluto") { Period = 90550, Radius = 5913520000, objectRadius = 1188, rotationalPeriod = 153, objectColor = "Beige" };
             pluto[0] = new Body("Charon") { Period = 6, Radius = 20000 };
             pluto[1] = new Body("Nix") { Period = 25, Radius = 49000 };
             pluto[2] = new Body("Hydra") { Period = 38, Radius = 65000 };
             sun[8] = pluto;
+            solarSystem["Pluto"] = pluto;
 
             PrintWithChildren(sun);
 
+            Boolean exit = false;
+            while(exit == false)
+            {
+            Console.Write("Enter amount of days since time 0 or '-1' to exit program: ");
+            int days = int.Parse(Console.ReadLine());
 
+            if(days== -1)
+                {
+                    exit = true;
+                    break;
+                }
+
+            Console.Write("Enter planet name, or leave blank for sun and all planets: ");
+            String planet = Console.ReadLine();
+
+            if(string.IsNullOrWhiteSpace(planet))
+            {
+                planet = "Sun";
+            }
+
+            if (solarSystem.ContainsKey(planet))
+            {
+                Body selectedBody = solarSystem[planet];
+                var (x, y) = selectedBody.getPosition(days);
+                Console.WriteLine($"{selectedBody.Name}: Position at day {days} -> X: {x}, Y: {y}");
+            } else
+            {
+                Console.WriteLine("Planet not found");
+            }
+            }
+            
 
         }
+
+        
 
         static void PrintWithChildren(Body x, int level = 0) {
 
@@ -157,7 +205,10 @@ namespace Properties {
 
 
         }
+        
+        
 
+        
 
     }
 }
