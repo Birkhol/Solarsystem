@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}|3 - Properties\\3 - Properties.csproj|solutionrelative:3 - properties\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}|3 - Properties\\3 - Properties.csproj|c:\\users\\sande\\downloads\\lecture 13\\3 - properties\\planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}|3 - Properties\\3 - Properties.csproj|solutionrelative:3 - properties\\planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3AF02F0-AAE6-441C-B437-02D860C121E9}|1 - Space Object\\1 - Space Object.csproj|c:\\users\\sande\\downloads\\lecture 13\\1 - space object\\spaceobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3AF02F0-AAE6-441C-B437-02D860C121E9}|1 - Space Object\\1 - Space Object.csproj|solutionrelative:1 - space object\\spaceobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5036E4AF-247E-4AD3-AAF3-01C281BE1093}|2 - Space Sim\\2 - Space Sim.csproj|c:\\users\\sande\\downloads\\lecture 13\\2 - space sim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5036E4AF-247E-4AD3-AAF3-01C281BE1093}|2 - Space Sim\\2 - Space Sim.csproj|solutionrelative:2 - space sim\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}|3 - Properties\\3 - Properties.csproj|c:\\users\\sande\\downloads\\lecture 13\\3 - properties\\planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}|3 - Properties\\3 - Properties.csproj|solutionrelative:3 - properties\\planet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sande\\Downloads\\Lecture 13\\Voluntary Task App\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,7 +64,7 @@
               "RelativeDocumentMoniker": "3 - Properties\\Program.cs",
               "ToolTip": "C:\\Users\\sande\\Downloads\\Lecture 13\\3 - Properties\\Program.cs",
               "RelativeToolTip": "3 - Properties\\Program.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAgwJgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAwDcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T14:49:56.74Z",
               "EditorCaption": ""
@@ -117,20 +117,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Planet.cs",
               "DocumentMoniker": "C:\\Users\\sande\\Downloads\\Lecture 13\\3 - Properties\\Planet.cs",
               "RelativeDocumentMoniker": "3 - Properties\\Planet.cs",
               "ToolTip": "C:\\Users\\sande\\Downloads\\Lecture 13\\3 - Properties\\Planet.cs",
               "RelativeToolTip": "3 - Properties\\Planet.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAYwEUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA1wEUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T14:41:09.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sande\\Downloads\\Lecture 13\\2 - Space Sim\\Program.cs",
               "RelativeDocumentMoniker": "2 - Space Sim\\Program.cs",
@@ -143,13 +143,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SpaceObject.cs",
               "DocumentMoniker": "C:\\Users\\sande\\Downloads\\Lecture 13\\1 - Space Object\\SpaceObject.cs",
               "RelativeDocumentMoniker": "1 - Space Object\\SpaceObject.cs",
               "ToolTip": "C:\\Users\\sande\\Downloads\\Lecture 13\\1 - Space Object\\SpaceObject.cs",
               "RelativeToolTip": "1 - Space Object\\SpaceObject.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwC0AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwC0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T14:40:58.985Z",
               "EditorCaption": ""
