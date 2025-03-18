@@ -5,8 +5,11 @@ using System.Text;
 namespace Properties {
     public class Body {
 
-        public Body(string name) {
+        public Body(string name, long radius = 0, int period = 0)
+        {
             this.Name = name;
+            this.Radius = radius;
+            this.Period = period;
         }
 
         // Manually created property with backing private variable
