@@ -387,15 +387,21 @@ namespace Properties {
                     }
             }
 
-            // If userinput correlates to a planet in the solarsystem, prints out its X and Y coordinates at specified #days
-            if (solarSystem.ContainsKey(planet))
-            {
-                Body selectedBody = solarSystem[planet];
-                var (x, y) = selectedBody.getPosition(days);
-                Console.WriteLine($"{selectedBody.Name}: Position at day {days} -> X: {x}, Y: {y}");
-            } else {
-                Console.WriteLine("Planet not found");
-            }
+                // If userinput correlates to a planet in the solarsystem, prints out its X and Y coordinates at specified #days
+                if (solarSystem.ContainsKey(planet))
+                {
+                    Body selectedBody = solarSystem[planet];
+                    var (x, y) = selectedBody.getPosition(days);
+                    Console.WriteLine($"{selectedBody.Name}: Position at day {days} -> X: {x}, Y: {y}");
+                    foreach (var moons in selectedBody.Values)
+                    {
+                        var (a, b) = moons.getPosition(days);
+                        Console.WriteLine($"{moons.Name}: Position at day {days} -> X: {a}, Y: {b}");
+                    }
+
+                } else {
+                    Console.WriteLine("Planet not found");
+                }
             }
             
 

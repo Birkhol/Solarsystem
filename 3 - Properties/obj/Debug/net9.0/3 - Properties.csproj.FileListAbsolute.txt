@@ -13,3 +13,6 @@ C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properti
 C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.genruntimeconfig.cache
 C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\ref\3 - Properties.dll
 C:\Users\sande\Downloads\Lecture 13\3 - Properties\obj\Debug\net9.0\3 - Properties.sourcelink.json
+C:\Users\sande\Documents\GitHub\Solarsystem\3 - Properties\obj\Debug\net9.0\3 - Properties.dll
+C:\Users\sande\Documents\GitHub\Solarsystem\3 - Properties\obj\Debug\net9.0\refint\3 - Properties.dll
+C:\Users\sande\Documents\GitHub\Solarsystem\3 - Properties\obj\Debug\net9.0\3 - Properties.pdb
