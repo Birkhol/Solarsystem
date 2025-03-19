@@ -1,9 +1,12 @@
-﻿using System;
+﻿//using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Properties {
-    public class Body {
+namespace Properties
+{
+    public class Body
+    {
 
         public Body(string name, long radius = 0, int period = 0)
         {
@@ -19,11 +22,14 @@ namespace Properties {
         /// <summary>
         /// Representing Orbital Radius in kilometers
         /// </summary>
-        public long Radius {
-            get {
+        public long Radius
+        {
+            get
+            {
                 return radius;
             }
-            set {
+            set
+            {
                 radius = value;
             }
         }
@@ -53,8 +59,10 @@ namespace Properties {
         /// <summary>
         /// Orbital Velocity
         /// </summary>
-        public double Velocity {
-            get {
+        public double Velocity
+        {
+            get
+            {
                 if (Period == 0) return 0;
                 return Radius * 2 * Math.PI / Period;
             }
@@ -64,14 +72,14 @@ namespace Properties {
         {
             get
             {
-                if(Period == 0) return 0;
+                if (Period == 0) return 0;
                 return (2 * Math.PI) / Period;
             }
         }
 
         public double angPos(int time)
         {
-                return angVelo * time;
+            return angVelo * time;
         }
 
         public (double x, double y) getPosition(int time)
@@ -81,6 +89,7 @@ namespace Properties {
             double y = Radius * Math.Sin(angle);
             return (x, y);
         }
+
 
         public (double x, double y) GetMoonPosition(int time, Body moon)
         {
@@ -100,11 +109,23 @@ namespace Properties {
         /// List of orbiting bodies (moons)
         /// </summary>
         Body[] moons = new Body[100];
-        public Body this[int i] {
-            get {
+        public IEnumerable<Body> GetMoons()
+        {
+            foreach (var moon in moons)
+            {
+                if (moon != null) yield return moon;
+                else break;
+            }
+        }
+
+        public Body this[int i]
+        {
+            get
+            {
                 return moons[i];
             }
-            set {
+            set
+            {
                 moons[i] = value;
             }
         }

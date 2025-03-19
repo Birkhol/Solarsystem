@@ -6,9 +6,12 @@ using System.Text;
 using System.Xml.Serialization;
 
 
-namespace Properties {
-    class Program {
-        static void Main() {
+namespace Properties
+{
+    class Program
+    {
+        static void Main()
+        {
 
             Dictionary<string, Body> solarSystem = new Dictionary<string, Body>();
 
@@ -34,7 +37,7 @@ namespace Properties {
             solarSystem["EARTH"] = earth;
 
             // Adding the moon to earth
-            Body moon = new("The Moon") {Period = 28,Radius = 384000, objectRadius = 1737, rotationalPeriod = 648, objectColor = "Gray"};
+            Body moon = new("The Moon") { Period = 28, Radius = 384000, objectRadius = 1737, rotationalPeriod = 648, objectColor = "Gray" };
             earth[0] = moon;
             solarSystem["MOON"] = moon;
 
@@ -52,7 +55,7 @@ namespace Properties {
             Body mars = new Body("Mars") { Period = 687, Radius = 227940000, objectRadius = 3389, rotationalPeriod = 25, objectColor = "Red" };
             sun[3] = mars;
             solarSystem["MARS"] = mars;
-            
+
             Body phobos = new Body("Phobos") { Period = 8, Radius = 9377 };
             mars[0] = phobos;
             solarSystem["PHOBOS"] = phobos;
@@ -61,13 +64,13 @@ namespace Properties {
             mars[1] = deimos;
             solarSystem["DEIMOS"] = deimos;
 
-            
+
 
             // Jupiter and its moons
             Body jupiter = new Body("Jupiter") { Period = 4333, Radius = 778330000, objectRadius = 69911, rotationalPeriod = 10, objectColor = "Beige" };
             sun[4] = jupiter;
             solarSystem["JUPITER"] = jupiter;
-            
+
             Body metis = new Body("Metis") { Period = 1, Radius = 128000 };
             jupiter[0] = metis;
             solarSystem["METIS"] = metis;
@@ -132,13 +135,13 @@ namespace Properties {
             jupiter[15] = sinope;
             solarSystem["SINOPE"] = sinope;
 
-            
+
 
             // Saturn and its moons
             Body saturn = new Body("Saturn") { Period = 10760, Radius = 1429400000, objectRadius = 58232, rotationalPeriod = 11, objectColor = "Latte" };
             sun[5] = saturn;
             solarSystem["SATURN"] = saturn;
-            
+
             Body pan = new Body("Pan") { Period = 1, Radius = 134000 };
             saturn[0] = pan;
             solarSystem["PAN"] = pan;
@@ -211,13 +214,13 @@ namespace Properties {
             saturn[17] = phoebe;
             solarSystem["PHOEBE"] = phoebe;
 
-            
+
 
             // Uranus and its moons
             Body uranus = new Body("Uranus") { Period = 30685, Radius = 2870990000, objectRadius = 25362, rotationalPeriod = 17, objectColor = "Blue" };
             sun[6] = uranus;
             solarSystem["URANUS"] = uranus;
-            
+
             Body cordelia = new Body("Cordelia") { Period = 1, Radius = 50000 };
             uranus[0] = cordelia;
             solarSystem["CORDELIA"] = cordelia;
@@ -298,13 +301,13 @@ namespace Properties {
             uranus[19] = setebos;
             solarSystem["SETEBOS"] = setebos;
 
-            
+
 
             // Neptune and its moons
             Body neptune = new Body("Neptune") { Period = 60190, Radius = 4504300000, objectRadius = 24622, rotationalPeriod = 16, objectColor = "Blue" };
             sun[7] = neptune;
             solarSystem["NEPTUNE"] = neptune;
-            
+
             Body naiad = new Body("Naiad") { Period = 1, Radius = 48000 };
             neptune[0] = naiad;
             solarSystem["NAIAD"] = naiad;
@@ -337,13 +340,13 @@ namespace Properties {
             neptune[7] = nereid;
             solarSystem["NEREID"] = nereid;
 
-            
+
 
             // Pluto and its moons
             Body pluto = new Body("Pluto") { Period = 90550, Radius = 5913520000, objectRadius = 1188, rotationalPeriod = 153, objectColor = "Beige" };
             sun[8] = pluto;
             solarSystem["PLUTO"] = pluto;
-            
+
             Body charon = new Body("Charon") { Period = 6, Radius = 20000 };
             pluto[0] = charon;
             solarSystem["CHARON"] = charon;
@@ -356,80 +359,94 @@ namespace Properties {
             pluto[2] = hydra;
             solarSystem["HYDRA"] = hydra;
 
-            
+
 
 
             PrintWithChildren(sun);
 
             // Ask user for number of days of time, then ask for which planet
             Boolean exit = false;
-            while(exit == false)
+            while (exit == false)
             {
-            Console.Write("Enter amount of days since time 0 or '-1' to exit program: ");
-            int days = int.Parse(Console.ReadLine());
+                Console.Write("Enter amount of days since time 0 or '-1' to exit program: ");
+                int days = int.Parse(Console.ReadLine());
 
-            if(days == -1)
+                if (days == -1)
                 {
                     exit = true;
                     break;
                 }
 
-            Console.Write("Enter planet name, or leave blank for sun and all planets: ");
-            String planet = Console.ReadLine().ToUpper();
+                Console.Write("Enter planet name, or leave blank for sun and all planets: ");
+                String planet = Console.ReadLine().ToUpper();
 
-            // If user inputs "Sun" or leaves blank, it will select all units in the solarsystem
-            if(string.IsNullOrWhiteSpace(planet))
-            {
+                // If user inputs "Sun" or leaves blank, it will select all units in the solarsystem
+                if (string.IsNullOrWhiteSpace(planet))
+                {
                     foreach (var body in solarSystem.Values)
                     {
                         var (x, y) = body.getPosition(days);
                         Console.WriteLine($"{body.Name}: Position at day {days} -> X: {x}, Y: {y}");
                     }
-            }
-
-            // If userinput correlates to a planet in the solarsystem, prints out its X and Y coordinates at specified #days
-            if (solarSystem.ContainsKey(planet))
-            {
-                Body selectedBody = solarSystem[planet];
-                var (x, y) = selectedBody.getPosition(days);
-                Console.WriteLine($"{selectedBody.Name}: Position at day {days} -> X: {x}, Y: {y}");
-            } else {
-                Console.WriteLine("Planet not found");
-            }
-            }
-            
-
-        }
-
-        
-
-        static void PrintWithChildren(Body x, int level = 0) {
-
-            if (level == 0) {
-                Console.WriteLine($"{"Astronomical Body",-20}\tOrbital Velocity");
-                Console.WriteLine($"=================\t================");
-            }
-
-            StringBuilder padding = new StringBuilder();
-            for (int i = 0; i < level; i++) { padding.Append("  "); }
-            Console.WriteLine($"{padding.ToString() + x.Name,-20}\t{x.Velocity,10:F2} km/day");
-
-
-            // Current implementation don't allow me to fetch the actual list of children
-            // I only have access to the indexer, which is why I used this less-than
-            // optimal solution here.
-            // Obviously, I could just have exposed the array directly through a property,
-            // but I kept it this way to focus on the indexer. We'll explore better options
-            // later in the course.
-            for (int i = 0; i < 100; i++) {
-                if (x[i] != null) {
-                    PrintWithChildren(x[i], level + 1);
-                } else {
-                    break;
                 }
+
+                // If userinput correlates to a planet in the solarsystem, prints out its X and Y coordinates at specified #days
+                if (solarSystem.ContainsKey(planet))
+                {
+                    Body selectedBody = solarSystem[planet];
+                    var (x, y) = selectedBody.getPosition(days);
+                    Console.WriteLine($"{selectedBody.Name}: Position at day {days} -> X: {x}, Y: {y}");
+                    foreach (var moons in selectedBody.GetMoons())
+                    {
+                        var (a, b) = moons.getPosition(days);
+                        Console.WriteLine($"{moons.Name}: Position at day {days} -> X: {a}, Y: {b}");
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Planet not found");
+                }
+
+
             }
 
 
+
+            static void PrintWithChildren(Body x, int level = 0)
+            {
+
+                if (level == 0)
+                {
+                    Console.WriteLine($"{"Astronomical Body",-20}\tOrbital Velocity");
+                    Console.WriteLine($"=================\t================");
+                }
+
+                StringBuilder padding = new StringBuilder();
+                for (int i = 0; i < level; i++) { padding.Append("  "); }
+                Console.WriteLine($"{padding.ToString() + x.Name,-20}\t{x.Velocity,10:F2} km/day");
+
+
+                // Current implementation don't allow me to fetch the actual list of children
+                // I only have access to the indexer, which is why I used this less-than
+                // optimal solution here.
+                // Obviously, I could just have exposed the array directly through a property,
+                // but I kept it this way to focus on the indexer. We'll explore better options
+                // later in the course.
+                for (int i = 0; i < 100; i++)
+                {
+                    if (x[i] != null)
+                    {
+                        PrintWithChildren(x[i], level + 1);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+
+            }
         }
     }
 }

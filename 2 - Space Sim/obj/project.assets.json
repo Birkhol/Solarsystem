@@ -28,19 +28,19 @@
   },
   "packageFolders": {
     "C:\\Users\\sande\\.nuget\\packages\\": {},
-    "D:\\Microsoft Visual Studio Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sande\\Downloads\\Lecture 13\\2 - Space Sim\\2 - Space Sim.csproj",
+      "projectUniqueName": "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\2 - Space Sim\\2 - Space Sim.csproj",
       "projectName": "2 - Space Sim",
-      "projectPath": "C:\\Users\\sande\\Downloads\\Lecture 13\\2 - Space Sim\\2 - Space Sim.csproj",
+      "projectPath": "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\2 - Space Sim\\2 - Space Sim.csproj",
       "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sande\\Downloads\\Lecture 13\\2 - Space Sim\\obj\\",
+      "outputPath": "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\2 - Space Sim\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft Visual Studio Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\sande\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,8 +59,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\sande\\Downloads\\Lecture 13\\1 - Space Object\\1 - Space Object.csproj": {
-              "projectPath": "C:\\Users\\sande\\Downloads\\Lecture 13\\1 - Space Object\\1 - Space Object.csproj"
+            "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\1 - Space Object\\1 - Space Object.csproj": {
+              "projectPath": "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\1 - Space Object\\1 - Space Object.csproj"
             }
           }
         }
@@ -96,7 +96,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

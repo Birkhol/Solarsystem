@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sande\\Downloads\\Lecture 13\\3 - Properties\\3 - Properties.csproj": {}
+    "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\3 - Properties\\3 - Properties.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sande\\Downloads\\Lecture 13\\3 - Properties\\3 - Properties.csproj": {
+    "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\3 - Properties\\3 - Properties.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sande\\Downloads\\Lecture 13\\3 - Properties\\3 - Properties.csproj",
+        "projectUniqueName": "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\3 - Properties\\3 - Properties.csproj",
         "projectName": "3 - Properties",
-        "projectPath": "C:\\Users\\sande\\Downloads\\Lecture 13\\3 - Properties\\3 - Properties.csproj",
+        "projectPath": "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\3 - Properties\\3 - Properties.csproj",
         "packagesPath": "C:\\Users\\sande\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sande\\Downloads\\Lecture 13\\3 - Properties\\obj\\",
+        "outputPath": "C:\\Users\\sande\\Documents\\GitHub\\Solarsystem\\3 - Properties\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft Visual Studio Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\sande\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -66,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
