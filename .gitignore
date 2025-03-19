@@ -3,22 +3,6 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-# Ignore Visual Studio & .vs folder
-.vs/
-
-# Ignore build and obj folders
-**/obj/
-**/bin/
-
-# Ignore project-specific cache files
-**/*.nuget.g.props
-**/*.nuget.dgspec.json
-**/*.AssemblyInfoInputs.cache
-**/*.GeneratedMSBuildEditorConfig.editorconfig
-**/*.assets.cache
-**/*.cache
-**/*.metadata.v9.bin
-
 # User-specific files
 *.rsuser
 *.suo
