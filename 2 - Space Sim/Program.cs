@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text.Encodings.Web;
+using System.Xml.Serialization;
 using SpaceSim;
+using static SpaceSim.SpaceObject;
 
 class Astronomy {
     public static void Main() {
@@ -23,7 +25,7 @@ class Astronomy {
 
         // Mars and its moons #4
         Planet mars = new Planet("Mars", 687, 227940000, 3389, 25, "Red");
-        Moon phobos = new Moon("Phobos", 0.32, 9377, 11267, "Grey");
+        Moon phobos = new Moon("Phobos", 0.32, 9377, 11, "Grey");
         Moon deimos = new Moon("Deimos", 1.26, 23460, 6, "Grey");
         mars.Moons.Add(phobos);
         mars.Moons.Add(deimos);
@@ -177,14 +179,60 @@ class Astronomy {
         List<SpaceObject> solarSystem = new List<SpaceObject>
         {
 
-            sun, mercury, venus, terra, mars, jupiter, saturn, uranus, neptune, pluto,
+            sun, mercury, venus, terra, mars, jupiter, saturn, uranus, neptune, pluto
 
         };
 
-        foreach (var s in solarSystem) {
+        List<Planet> planets = new List<Planet>
+        {
+            mercury, venus, terra, mars, jupiter, saturn, uranus, neptune
+        };
+
+        foreach (var s in planets) {
             s.Draw();
         }
 
+        Boolean exit = false;
+        while (exit == false)
+        {
+        Console.WriteLine("Enter name of a planet, type 'exit' to quit");
+        string planetName = Console.ReadLine();
+
+        if (planetName.Equals("exit"))
+            {
+                exit = true;
+                break;
+            }
+
+        Planet selectedPlanet = planets.Find(x => x.Name.Equals(planetName));
+        
+
+        Console.WriteLine("Enter amount of days");
+        int days = int.Parse(Console.ReadLine());
+
+        var planetPosition = selectedPlanet.GetPosition(days);
+        Console.WriteLine($"{selectedPlanet.Name}: Position at day {days} -> X: {planetPosition.X}, Y: {planetPosition.Y}");
+            
+        if (string.IsNullOrWhiteSpace(planetName))
+        {
+            foreach (var o in solarSystem)
+            {
+                var (x, y) = o.GetPosition(days);
+                Console.WriteLine($"{o.Name}: Position at day {days} -> X: {x}, Y: {y}");
+            }
+        }
+
+        foreach (var m in selectedPlanet.Moons)
+        {
+            var moonPosition = m.GetMoonPosition(days, moon);
+            Console.WriteLine($"{m.Name}'s Position after {days} days: X = {moonPosition.a}, Y = {moonPosition.b}");
+        }
+
+        
+        }
+
+        
     }
+
 }
 

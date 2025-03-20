@@ -407,8 +407,6 @@ namespace Properties
                 {
                     Console.WriteLine("Planet not found");
                 }
-
-
             }
 
 
