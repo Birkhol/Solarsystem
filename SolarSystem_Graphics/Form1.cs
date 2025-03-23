@@ -23,6 +23,7 @@ namespace SolarSystem_Graphics
         // Delegate and event for tick notifications (DoTick)
         public delegate void TickEventHandler(int time);
         public event TickEventHandler DoTick;
+        private bool showPlanetInfo = true;
 
         public Form1()
         {
@@ -47,6 +48,16 @@ namespace SolarSystem_Graphics
             };
             orbitsCheckBox.CheckedChanged += (s, e) => { showOrbits = orbitsCheckBox.Checked; Invalidate(); };
             Controls.Add(orbitsCheckBox);
+
+            CheckBox infoCheckBox = new CheckBox
+            {
+                Text = "Show Info",
+                Checked = showPlanetInfo,
+                Location = new Point(10, 200)
+            };
+            infoCheckBox.CheckedChanged += (s, e) => { showPlanetInfo = infoCheckBox.Checked; Invalidate(); };
+            Controls.Add(infoCheckBox);
+
 
             // Get space objects from the solar system
             spaceObjects = SolarSystem.GetSpaceObjects();
@@ -214,6 +225,8 @@ namespace SolarSystem_Graphics
                 }
 
                 // Display detailed planet data in the top-left corner.
+                if(showPlanetInfo) 
+                { 
                 string planetInfo = $"Planet: {zoomedPlanet.Name}\n" +
                                     $"Orbital Period: {zoomedPlanet.OrbitalPeriod}\n" +
                                     $"Orbital Radius: {zoomedPlanet.OrbitalRadius}\n" +
@@ -222,6 +235,7 @@ namespace SolarSystem_Graphics
                 Font infoFont = new Font("Arial", 10);
                 Brush infoBrush = new SolidBrush(Color.White);
                 g.DrawString(planetInfo, infoFont, infoBrush, 10, 10);
+                }
             }
         }
 
