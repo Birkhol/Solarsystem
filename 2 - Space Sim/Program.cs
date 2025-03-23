@@ -225,7 +225,7 @@ class Astronomy {
         foreach (var m in selectedPlanet.Moons)
         {
             var moonPosition = m.GetMoonPosition(days, moon);
-            Console.WriteLine($"{m.Name}'s Position after {days} days: X = {moonPosition.a}, Y = {moonPosition.b}");
+            Console.WriteLine($"{m.Name}'s Position after {days} days: X = {moonPosition.a + planetPosition.X}, Y = {moonPosition.b + planetPosition.Y}");
         }
 
         

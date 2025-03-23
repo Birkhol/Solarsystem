@@ -43,9 +43,8 @@ namespace SpaceSim
 
         public (double a, double b) GetMoonPosition(int time, Moon moon)
         {
-            var (px, py) = GetPosition(time); // Get planet's position relative to the sun
             var (mx, my) = moon.GetPosition(time); // Get moon's position relative to the planet
-            return (px + mx, py + my); // Moon's absolute position relative to the sun
+            return (mx, my); 
         }
 
         public virtual void Draw()
