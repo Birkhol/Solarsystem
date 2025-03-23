@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2 - Space Sim", "2 - Space 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3 - Properties", "3 - Properties\3 - Properties.csproj", "{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solarsystem Graphic", "Solarsystem Graphic\Solarsystem Graphic.csproj", "{D4F7F14B-335B-4116-9C22-FDC6073A2BB7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolarSystem_Graphics", "SolarSystem_Graphics\SolarSystem_Graphics.csproj", "{98FAF50F-CAC9-4F5C-9072-51419AA7500A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E44EC7C-26AB-4375-8E0C-2777EF698C4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D4F7F14B-335B-4116-9C22-FDC6073A2BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4F7F14B-335B-4116-9C22-FDC6073A2BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4F7F14B-335B-4116-9C22-FDC6073A2BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4F7F14B-335B-4116-9C22-FDC6073A2BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FAF50F-CAC9-4F5C-9072-51419AA7500A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FAF50F-CAC9-4F5C-9072-51419AA7500A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FAF50F-CAC9-4F5C-9072-51419AA7500A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FAF50F-CAC9-4F5C-9072-51419AA7500A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

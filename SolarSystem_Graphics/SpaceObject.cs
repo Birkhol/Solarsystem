@@ -6,12 +6,12 @@ namespace SpaceSim
     public class SpaceObject
     {
         public string Name { get; protected set; }
-        public int ObjectRadius { get; protected set; }
+        public double ObjectRadius { get; protected set; }
         public string Color { get; protected set; }
-        public long OrbitalRadius { get; protected set; } 
+        public double OrbitalRadius { get; protected set; } 
         public double OrbitalPeriod { get; protected set; }
 
-        public SpaceObject(string name, int objectRadius, string color, long orbitalRadius = 0, double orbitalPeriod = 0)
+        public SpaceObject(string name, double objectRadius, string color, double orbitalRadius = 0, double orbitalPeriod = 0)
         {
             Name = name;
             ObjectRadius = objectRadius;
@@ -56,7 +56,7 @@ namespace SpaceSim
     public class Star : SpaceObject
     {
         public int rotationalPeriod { get; protected set; }
-        public Star(String name, int rotationalPeriod, int objectRadius, String color) : base(name, objectRadius, color) { }
+        public Star(String name, int rotationalPeriod, double objectRadius, String color) : base(name, objectRadius, color) { }
         public override void Draw()
         {
             Console.Write("Star  : ");
@@ -65,7 +65,7 @@ namespace SpaceSim
     }
     public class Moon : SpaceObject
     {
-        public Moon(string name, double orbitalPeriod, int orbitalRadius, int objectRadius, string color)
+        public Moon(string name, double orbitalPeriod, double orbitalRadius, double objectRadius, string color)
             : base(name, objectRadius, color, orbitalRadius, orbitalPeriod) // Pass values to base class
         {
         }
@@ -95,13 +95,11 @@ namespace SpaceSim
 
         public List<Moon> Moons { get; } = new List<Moon>();
 
-        public Planet(string name, double orbitalPeriod, long orbitalRadius, int objectRadius, int rotationalPeriod, string color)
+        public Planet(string name, double orbitalPeriod, double orbitalRadius, double objectRadius, int rotationalPeriod, string color)
             : base(name, objectRadius, color, orbitalRadius, orbitalPeriod) // Pass values to base class
         {
             RotationalPeriod = rotationalPeriod;
         }
-
-
 
         public override void Draw()
         {
@@ -121,7 +119,7 @@ namespace SpaceSim
         public int rotationalPeriod { get; protected set; }
 
         public List<Moon> Moons { get; } = new List<Moon>();
-        public DwarfPlanet(String name, double orbitalPeriod, long orbitalRadius, int objectRadius, int rotationalPeriod, String color) : base(name, objectRadius, color) { }
+        public DwarfPlanet(String name, double orbitalPeriod, double orbitalRadius, double objectRadius, int rotationalPeriod, String color) : base(name, objectRadius, color) { }
 
         public virtual (double X, double Y) GetPosition(int days)
         {
@@ -144,7 +142,7 @@ namespace SpaceSim
 
     public class Asteroid : SpaceObject
     {
-        public Asteroid(string name, int objectRadius, string color) : base(name, objectRadius, color) { }
+        public Asteroid(string name, double objectRadius, string color) : base(name, objectRadius, color) { }
         public override void Draw()
         {
             Console.Write("    Asteroid : ");
@@ -154,7 +152,7 @@ namespace SpaceSim
 
     public class AsteroidBelt : SpaceObject
     {
-        public AsteroidBelt(string name, int objectRadius, string color) : base(name, objectRadius, color) { }
+        public AsteroidBelt(string name, double objectRadius, string color) : base(name, objectRadius, color) { }
         public override void Draw()
         {
             Console.Write("    Asteroid Belt : ");
