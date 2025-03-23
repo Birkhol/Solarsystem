@@ -73,7 +73,7 @@ namespace SpaceSim
         public (double X, double Y) GetPositionMoon(int days, (double X, double Y) planetPosition)
         {
             var (px, py) = planetPosition;
-            double angle = 2 * Math.PI * (days / (OrbitalPeriod * 365.25)); // Convert years to days
+            double angle = 2 * Math.PI * (days / (OrbitalPeriod * 365.25)); 
             double x = px + OrbitalRadius * Math.Cos(angle);
             double y = py + OrbitalRadius * Math.Sin(angle);
             return (x, y);
